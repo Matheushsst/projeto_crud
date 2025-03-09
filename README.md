@@ -1,7 +1,7 @@
 # Projeto CRUD
 
 ## Description
-Projeto full-stack que consiste em um sistema de armazenamento e gerenciamento de produtos para empresas, permitindo criação, leitura, atualização e exclusão de produtos. Projeto em desenvolvimento.
+A full-stack project, wich consists in an product storage and management system, allowing creation, read, update and exclusion of products. Project still in development.
 
 ## Technologies
 
@@ -20,4 +20,4 @@ MySQL
 - List products in the system
 - Update products
 - Delete products
-- User autentification, with different permissions
+- User authentification, with different permissions
