@@ -23,7 +23,7 @@ public class ProductService {
     }
 
     //Add products
-    public ResponseEntity<?> add(ProdutoModelo pm) {
+    public ResponseEntity<?> addUpdate(ProdutoModelo pm, String acao) {
         if(pm.getNome().equals("")){
             rm.setResponse("O nome do produto é obrigatório!");
             return new ResponseEntity<ResponseModel>(rm,HttpStatus.BAD_REQUEST);
@@ -31,7 +31,11 @@ public class ProductService {
             rm.setResponse("O produto deve ter sua marca especificada");
             return new ResponseEntity<ResponseModel>(rm,HttpStatus.BAD_REQUEST);
         } else {
-            return new ResponseEntity<ProdutoModelo>(pr.save(pm), HttpStatus.CREATED);
+            if(acao.equals("add")){
+                return new ResponseEntity<ProdutoModelo>(pr.save(pm), HttpStatus.CREATED);
+            }else{
+            return new ResponseEntity<ProdutoModelo>(pr.save(pm), HttpStatus.OK);
+            }
         }
     }
 }

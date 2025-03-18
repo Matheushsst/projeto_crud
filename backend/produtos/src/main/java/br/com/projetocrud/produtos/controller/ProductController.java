@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 
 @RestController
@@ -24,7 +25,12 @@ import org.springframework.web.bind.annotation.RequestBody;
     
     @PostMapping("/add")
     public ResponseEntity<?> add(@RequestBody ProdutoModelo pm){
-        return ps.add(pm);
+        return ps.addUpdate(pm, "add");
+    }
+
+    @PutMapping("/update")
+    public ResponseEntity<?> update(@RequestBody ProdutoModelo pm){
+        return ps.addUpdate(pm, "update");
     }
 
     @GetMapping("/")
