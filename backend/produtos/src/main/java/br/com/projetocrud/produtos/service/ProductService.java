@@ -38,4 +38,11 @@ public class ProductService {
             }
         }
     }
+
+    //Delete products
+    public ResponseEntity<ResponseModel> delete(Long code){
+        pr.deleteById(code);
+        rm.setResponse("O produto foi removido com sucesso");
+        return new ResponseEntity<ResponseModel>(rm, HttpStatus.OK);
+    }
 }
