@@ -5,10 +5,10 @@ function Form(){
             <input type='text' placeholder='Name'/>
             <input type='text' placeholder='Marca'/>
 
-            <input type='button' value='Add'/>
-            <input type='button' value='Delete'/>
-            <input type='button' value='Update'/>
-            <input type='button' value='Cancel'/>
+            <input className="btn btn-success" type='button' value='Add'/>
+            <input className="btn btn-danger" type='button' value='Delete'/>
+            <input className="btn btn-primary" type='button' value='Update'/>
+            <input className="btn btn-warning" type='button' value='Cancel'/>
         </form>
     )
 }
