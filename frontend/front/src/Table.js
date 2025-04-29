@@ -1,4 +1,4 @@
-function Table(){
+function Table(vetor){
     return(
         <table className="table">
             <thead>
@@ -15,6 +15,16 @@ function Table(){
                         <td></td>
                         <td></td>
                     </tr>
+                    {
+                        vetor.map((obj,indice) => (
+                            <tr key={indice}>
+                                <td>{indice + 1}</td>
+                                <td>{obj.nome}</td>
+                                <td>{obj.marca}</td>
+                                <td><button className="btn btn-success"></button></td>
+                            </tr>
+                        ))
+                    }
                 </tbody>
             </thead>
         </table>

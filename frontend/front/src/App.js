@@ -16,9 +16,8 @@ useEffect(() => {
 
 return (    
       <div>
-        <p>{JSON.stringify(produtos)}</p>
         <Form button={RegisterBt}/>
-        <Table/>
+        <Table vetor={produtos}/>
       </div>
   )
  
