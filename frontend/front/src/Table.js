@@ -1,4 +1,4 @@
-function Tabela(){
+function Table(){
     return(
         <table className="table">
             <thead>
@@ -20,3 +20,5 @@ function Tabela(){
         </table>
     )
 }
+
+export default Table;
