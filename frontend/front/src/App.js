@@ -1,15 +1,23 @@
-import { useState } from 'react';
+import {useEffect, useState} from 'react';
 import './App.css';
 import Form from './Form';
 import Table from './Table';
 
 function App() {
 
-const[btnCadastrar] =useState(false);
+const[RegisterBt] =useState(true);
+const[products, setProducts] =useState([]);
+
+useEffect(() => {
+  fetch("http://localhost:8080/listar")
+      .then(retorno => retorno.json())
+      .then(retorno_convertido => setProdutos(retorno_convertido));
+  }, []);
 
 return (    
       <div>
-        <Form botao={btnCadastrar}/>
+        <p>{JSON.stringify(produtos)}</p>
+        <Form button={RegisterBt}/>
         <Table/>
       </div>
   )
