@@ -1,14 +1,13 @@
-function Table(){
+function Tabela(){
     return(
-        <table>
+        <table className="table">
             <thead>
                 <tr>
                     <th>#</th>
-                    <th>Name</th>
+                    <th>Nome</th>
                     <th>Marca</th>
-                    <th>Select</th>
+                    <th>Selecionar</th>
                 </tr>
-
                 <tbody>
                     <tr>
                         <td></td>
@@ -21,5 +20,3 @@ function Table(){
         </table>
     )
 }
-
-export default Table;

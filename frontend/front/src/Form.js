@@ -2,13 +2,19 @@ function Form(){
     return(
         <form>
             <h1>Form</h1>
-            <input type='text' placeholder='Name'/>
-            <input type='text' placeholder='Marca'/>
-
-            <input className="btn btn-success" type='button' value='Add'/>
-            <input className="btn btn-danger" type='button' value='Delete'/>
-            <input className="btn btn-primary" type='button' value='Update'/>
-            <input className="btn btn-warning" type='button' value='Cancel'/>
+            <input className="form-control" type="text" placeholder="Nome"></input>
+            <input className="form-control" type="text" placeholder="Marca"></input>
+            {
+                botao
+                ?
+                <input className="btn btn-success" type="button" value="Cadastrar" />
+                :
+                <div>
+                    <input className="btn btn-warning" type="button" value="Cancelar" />
+                    <input className="btn btn-primary" type="button" value="Alterar" />
+                    <input className="btn btn-danger"  type="button" value="Remover" />
+                </div>
+            }
         </form>
     )
 }

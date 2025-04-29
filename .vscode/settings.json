@@ -1,4 +1,26 @@
 {
-    "java.configuration.updateBuildConfiguration": "interactive",
-    "java.compile.nullAnalysis.mode": "automatic"
+ 
+    "cSpell.words": [
+ 
+
+        "Alterar",
+ 
+
+        "botao",
+ 
+
+        "Cadastrar",
+ 
+
+        "Cancelar",
+ 
+        "Formulario",
+ 
+
+        "Marca",
+ 
+        "Tabela"
+ 
+    ]
+ 
 }
