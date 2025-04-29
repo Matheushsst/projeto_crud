@@ -6,7 +6,7 @@ import Table from './Table';
 function App() {
 
 const[RegisterBt] =useState(true);
-const[products, setProducts] =useState([]);
+const[produtos, setProdutos] =useState([]);
 
 useEffect(() => {
   fetch("http://localhost:8080/listar")
