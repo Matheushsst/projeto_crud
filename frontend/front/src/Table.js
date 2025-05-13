@@ -1,4 +1,4 @@
-function Table(vetor){
+function Table({vetor}){
     return(
         <table className='table'>
             <thead>
