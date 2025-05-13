@@ -46,10 +46,15 @@ useEffect(() => {
     })
   }
 
+  const selecionarProduto= (indice) => {
+    setObjProduto(produtos[indice]);
+    setRegisterBt(false)
+  }
+
 return (    
       <div>
         <Form button={RegisterBt} eventoTeclado={aoDigitar} cadastrar={cadastrar} objProduto={objProduto}/>
-        <Table vetor={produtos}/>
+        <Table vetor={produtos} selecionar={selecionarProduto}/>
       </div>
   )
  
