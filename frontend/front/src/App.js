@@ -41,9 +41,14 @@ useEffect(() => {
       }else{
         setProdutos([...produtos, retorno_convertido]);
         alert('Produto cadastrado com sucesso!')
-        setObjProduto(produto);
+        limparFormulario();
       }
     })
+  }
+
+  const limparFormulario = () => {
+    setObjProduto(produto);
+    setRegisterBt(true);
   }
 
   const selecionarProduto= (indice) => {
@@ -53,7 +58,7 @@ useEffect(() => {
 
 return (    
       <div>
-        <Form button={RegisterBt} eventoTeclado={aoDigitar} cadastrar={cadastrar} objProduto={objProduto}/>
+        <Form button={RegisterBt} eventoTeclado={aoDigitar} cadastrar={cadastrar} objProduto={objProduto} cancelar={limparFormulario}/>
         <Table vetor={produtos} selecionar={selecionarProduto}/>
       </div>
   )
