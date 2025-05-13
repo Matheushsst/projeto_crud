@@ -46,6 +46,37 @@ useEffect(() => {
     })
   }
 
+  const alterar = () =>{
+    fetch('http://localhost:8080/update', {
+      method: 'put',
+      body: JSON.stringify(objProduto),
+      headers: {
+        'Content-type': 'application/json',
+        'Accept': 'application/json'
+      }
+    })
+    .then(retorno => retorno.json())
+    .then(retorno_convertido => {
+      if(retorno_convertido.mensagem !== undefined) {
+        alert(retorno_convertido.mensagem);
+      }else{
+        alert('Produto alterado com sucesso!');
+      }
+
+      let vetorTemp = [...produtos];
+
+      let indice = vetorTemp.findIndex((p) => {
+        return p.codigo === objProduto.codigo;
+      });
+
+      vetorTemp[indice] = objProduto;
+
+      setProdutos(vetorTemp);
+
+      limparFormulario();
+    })
+  }
+
   const remover = () => {
     fetch('http://localhost:8080/delete/' + objProduto.codigo, {
       method: 'delete',
@@ -85,7 +116,7 @@ useEffect(() => {
 
 return (    
       <div>
-        <Form button={RegisterBt} eventoTeclado={aoDigitar} cadastrar={cadastrar} objProduto={objProduto} cancelar={limparFormulario} remover={remover}/>
+        <Form button={RegisterBt} eventoTeclado={aoDigitar} cadastrar={cadastrar} objProduto={objProduto} cancelar={limparFormulario} remover={remover} alterar={alterar}/>
         <Table vetor={produtos} selecionar={selecionarProduto}/>
       </div>
   )

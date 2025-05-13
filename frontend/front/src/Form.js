@@ -1,4 +1,4 @@
-function Form({ button, eventoTeclado, cadastrar, objProduto, cancelar, remover}) {
+function Form({ button, eventoTeclado, cadastrar, objProduto, cancelar, remover, alterar}) {
     return (
         <form>
             <h2>Sistema Gestor de Produtos</h2>
@@ -30,7 +30,7 @@ function Form({ button, eventoTeclado, cadastrar, objProduto, cancelar, remover}
                     :
                     <div>
                         <input className="btn btn-warning" type="button" onClick={cancelar} value="Cancelar" />
-                        <input className="btn btn-primary" type="button" value="Alterar" />
+                        <input className="btn btn-primary" type="button" onClick={alterar} value="Alterar" />
                         <input className="btn btn-danger" type="button" onClick={remover} value="Remover" />
                     </div>
             }
