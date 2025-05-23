@@ -1,14 +1,15 @@
 import {useEffect, useState} from 'react';
 import './App.css';
 import Form from './Form';
-import Table from './Table';
+import Card from './Card';
 
 function App() {
 
   const produto = {
     codigo: null,
     nome: '',
-    marca: ''
+    marca: '',
+    imagem: ''
   }
 
 const[RegisterBt, setRegisterBt] =useState(true);
@@ -117,7 +118,7 @@ useEffect(() => {
 return (    
       <div>
         <Form button={RegisterBt} eventoTeclado={aoDigitar} cadastrar={cadastrar} objProduto={objProduto} cancelar={limparFormulario} remover={remover} alterar={alterar}/>
-        <Table vetor={produtos} selecionar={selecionarProduto}/>
+        <Card vetor={produtos} selecionar={selecionarProduto}/>
       </div>
   )
  

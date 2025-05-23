@@ -24,36 +24,16 @@ form input[type="text"] {
   font-size: 1em;
 }
 
-.table {
+.row {
+  margin-left: 20vh;
+  padding: 30px;
+  position: relative;
   width: 80%;
-  margin: 30px auto;
-  border-collapse: collapse;
-  font-size: 1.1em;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-}
- 
-
-.table th, .table td {
-  border: 1px solid #ddd;
-  padding: 10px 8px;
-  text-align: center;
-}
-
-.table thead {
-  background-color: #f4f4f4;
-}
-
-.table tr:nth-child(even) {
-  background-color: #f9f9f9;
-}
-
-.table tr:hover {
-  background-color: #e0f7fa;
 }
 
 .btn-success {
-  background-color: #218838;
-  color: #fff;
+  background-color:  f8bfc7;
+  color: black;
   border: none;
   padding: 6px 12px;
   border-radius: 4px;
@@ -62,7 +42,7 @@ form input[type="text"] {
 }
 
 .btn-success:hover {
-  background-color: #155724;
+  background-color: #f4c0c8;
 }
 
 .fundo-formulario {
@@ -83,14 +63,19 @@ form input[type="text"] {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0,0,0,0.17);
+  background-color: rgba(0,0,0,0.12);
 }
 
 .formulario {
-  background-color: rgba(245, 182, 194, 0.5);
+  background-color: rgba(208,108,136,0.8);
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 50%;
+}
+
+.fundo-tabela {
+  background-color: rgba(208,108,136,0.8);
+  padding: 10px;
 }
