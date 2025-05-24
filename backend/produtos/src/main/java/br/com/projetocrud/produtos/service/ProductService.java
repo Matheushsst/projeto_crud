@@ -15,7 +15,7 @@ public class ProductService {
     @Autowired
     private ProductRepository pr;
 
-    private ResponseModel rm;
+    private ResponseModel rm = new ResponseModel();
 
     //Show products
     public Iterable<ProdutoModelo> listar(){
@@ -40,9 +40,15 @@ public class ProductService {
     }
 
     //Delete products
-    public ResponseEntity<ResponseModel> delete(Long code){
-        pr.deleteById(code);
-        rm.setResponse("O produto foi removido com sucesso");
-        return new ResponseEntity<ResponseModel>(rm, HttpStatus.OK);
+    public ResponseEntity<ResponseModel> delete(Long codigo){
+        pr.deleteById(codigo);
+        try {
+            pr.deleteById(codigo);
+            rm.setResponse("O produto foi removido com sucesso");
+            return new ResponseEntity<>(rm, HttpStatus.OK);
+        } catch (Exception e) {
+            rm.setResponse("Erro ao remover: " + e.getMessage());
+            return new ResponseEntity<>(rm, HttpStatus.BAD_REQUEST);
+        }
     }
 }

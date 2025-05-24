@@ -89,7 +89,11 @@ useEffect(() => {
 
     .then(retorno => retorno.json())
     .then(retorno_convertido => {
-      alert(retorno_convertido.mensagem);
+      if(retorno_convertido.mensagem !== undefined) {
+        alert(retorno_convertido.mensagem);
+      }else{
+        alert('Produto removido com sucesso!');
+      }
 
       let vetorTemp = [...produtos];
 

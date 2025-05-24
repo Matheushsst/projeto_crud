@@ -40,8 +40,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 
     @DeleteMapping("/delete/{codigo}")
     public ResponseEntity<ResponseModel>
-        delete(@PathVariable Long code){
-            return ps.delete(code);
+        delete(@PathVariable Long codigo){
+            return ps.delete(codigo);
         }
 
     @GetMapping("/")
