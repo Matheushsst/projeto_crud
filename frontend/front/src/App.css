@@ -25,10 +25,14 @@ form input[type="text"] {
 }
 
 .row {
-  margin-left: 20vh;
+  margin-left: 30vh;
   padding: 30px;
   position: relative;
-  width: 80%;
+  width: 70%;
+}
+
+.card {
+  width: 18rem;
 }
 
 .btn-success {
@@ -46,11 +50,11 @@ form input[type="text"] {
 }
 
 .fundo-formulario {
-  background-image: url('/public/fundo03.avif');
+  background-image: url('/public/Adobe Express - file.png');
   background-size: cover;
   background-position: center;
   padding: 40px;
-  min-height: 100vh;
+  min-height: 70vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -73,9 +77,4 @@ form input[type="text"] {
   left: 50%;
   transform: translate(-50%, -50%);
   width: 50%;
-}
-
-.fundo-tabela {
-  background-color: rgba(208,108,136,0.8);
-  padding: 10px;
 }

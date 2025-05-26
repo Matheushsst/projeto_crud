@@ -20,4 +20,5 @@ public class ProdutoModelo {
     private String nome;
     private String marca;
     private String imagem;
+    private String preco;
 }

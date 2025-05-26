@@ -9,7 +9,8 @@ function App() {
     codigo: null,
     nome: '',
     marca: '',
-    imagem: ''
+    imagem: '',
+    preco: ''
   }
 
 const[RegisterBt, setRegisterBt] =useState(true);
