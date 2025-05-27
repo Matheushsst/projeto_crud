@@ -1,23 +1,26 @@
 # Projeto CRUD
 
-## Description
-A full-stack project, wich consists in an product storage and management system, allowing creation, read, update and exclusion of products. Project still in development.
+## Descrição
+Esse é um projeto full-stack que implementa um sistema CRUD(Create, Read, Update, Delete) primordiamente para gerenciamento de produtos de uma floricultura. O projeto permite visualizar produtos cadastrados, cadastrar novos produtos assim como alterar informações sobre os produtos já existentes, como nome, marca, imagem, preço e quantidade.
 
-## Technologies
+## Tecnologias
 
 ### Front-end
-React
+- React
+- JavaScript
+- Bootstrap
 
 ### Back-end
-Java Spring Boot
+- Java 21
+- Spring Boot
+- Maven
 
-### Database
-MySQL
+### Banco de dados
+- MySQL
 
-## Functions
+## Funções
 
-- Add new products to the system
-- List products in the system
-- Update products
-- Delete products
-- User authentification, with different permissions
+- Adicionar novos produtos
+- Listar todos os produtos
+- Atualizar produtos
+- Deletar produtos
