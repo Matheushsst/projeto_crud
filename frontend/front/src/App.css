@@ -2,7 +2,6 @@ form{
   width: 600px;
   margin: 30px auto;
   text-align: center;
-  background: #fff;
   padding: 24px 32px;
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.07);
@@ -36,8 +35,8 @@ form input[type="text"] {
 }
 
 .btn-success {
-  background-color:  f8bfc7;
-  color: black;
+  background-color: #9dda97;
+  color: #ffffff;
   border: none;
   padding: 6px 12px;
   border-radius: 4px;
@@ -46,15 +45,16 @@ form input[type="text"] {
 }
 
 .btn-success:hover {
-  background-color: #f4c0c8;
+  background-color: #ffffff;
+  color: #9dda97;
 }
 
 .fundo-formulario {
-  background-image: url('/public/Adobe Express - file.png');
+  background-image: url('/public/20250526_2035_image.png');
   background-size: cover;
   background-position: center;
   padding: 40px;
-  min-height: 70vh;
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -71,7 +71,7 @@ form input[type="text"] {
 }
 
 .formulario {
-  background-color: rgba(208,108,136,0.8);
+  background-color: rgba(244, 233, 218, 0.4);
   position: absolute;
   top: 50%;
   left: 50%;

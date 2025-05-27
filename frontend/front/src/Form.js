@@ -37,6 +37,14 @@ function Form({ button, eventoTeclado, cadastrar, objProduto, cancelar, remover,
                         value={objProduto.preco}
                         onChange={eventoTeclado}
                     />
+                    <input
+                        className="form-control"
+                        type="text"
+                        placeholder="Quantidade"
+                        name="quantidade"
+                        value={objProduto.quantidade}
+                        onChange={eventoTeclado}
+                    />
                     {
                         button
                             ?

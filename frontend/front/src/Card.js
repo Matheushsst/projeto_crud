@@ -11,6 +11,7 @@ function Card({vetor, selecionar}){
                             <div className="card-body">
                                 <h5 className="card-title">{obj.nome}</h5>
                                 <p class="card-text">{obj.marca}</p>
+                                <p class="card-text">Quantidade: {obj.quantidade}</p>
                                 <p class="card-text"><strong>R$ {obj.preco}</strong></p>
                                 <button onClick={() => {selecionar(indice)}} className="btn btn-success">Selecionar</button>
                             </div>
